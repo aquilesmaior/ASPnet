@@ -30,5 +30,17 @@ namespace Exercicios_1 {
             txtAddress.Text = "";
 
         }
+
+        protected void btnSelect_Click(object sender, EventArgs e) {
+            // SelectedItem  devolve o item selecionado
+
+            // Aqui iremos pegar o item selecionado tanto no dropdown como no listbox
+            ListItem item = dlistSite.SelectedItem;
+            txtSite.Text = item.Text;
+
+            item = listAddress.SelectedItem;
+            txtAddress.Text = item.Text;
+
+        }
     }
 }
