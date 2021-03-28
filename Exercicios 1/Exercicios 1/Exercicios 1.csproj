@@ -69,6 +69,7 @@
   <ItemGroup>
     <Content Include="ConhecendoComponentes.aspx" />
     <Content Include="HelloWorld.aspx" />
+    <Content Include="Tabuada.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -87,6 +88,13 @@
       <DependentUpon>HelloWorld.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tabuada.aspx.cs">
+      <DependentUpon>Tabuada.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tabuada.aspx.designer.cs">
+      <DependentUpon>Tabuada.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
