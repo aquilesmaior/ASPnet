@@ -20,26 +20,52 @@ namespace Exercicios_1 {
             // Usando construtor
 
             // Add o nome da empresa no droplist
-            ListItem item = new ListItem(txtSite.Text, dlistSite.Items.Count.ToString());
+            // ListItem item = new ListItem(txtSite.Text, dlistSite.Items.Count.ToString());
+            ListItem item = new ListItem(txtSite.Text, txtAddress.Text);
             dlistSite.Items.Add(item);
+            listAddress.Items.Add(item);
+            txtAddress.Text = "";
             txtSite.Text = ""; //após adicionar, ele reseta o campo para vazio
 
+            /*
             // Add o site na lista de sites
             item = new ListItem(txtAddress.Text, listAddress.Items.Count.ToString());
             listAddress.Items.Add(item);
             txtAddress.Text = "";
-
+            */
         }
 
         protected void btnSelect_Click(object sender, EventArgs e) {
+
+            dlistSite.Items.Clear();
+            /*
+            ListItem li;
+            for (int i = 0; i < listAddress.Items.Count; i++) {
+                li = listAddress.Items[i];
+                if (li.Selected) {
+                    li.Selected = false;
+                    dlistSite.Items.Add(li);
+                }
+            }
+            */
+
+            //Usndo ForEach
+            foreach (ListItem item in listAddress.Items) {
+                if (item.Selected) {
+                    item.Selected = false;
+                    dlistSite.Items.Add(item);
+                }
+
+            }
+
+            
             // SelectedItem  devolve o item selecionado
-
             // Aqui iremos pegar o item selecionado tanto no dropdown como no listbox
-            ListItem item = dlistSite.SelectedItem;
+            /*ListItem item = dlistSite.SelectedItem;
             txtSite.Text = item.Text;
-
             item = listAddress.SelectedItem;
             txtAddress.Text = item.Text;
+            */
 
         }
     }

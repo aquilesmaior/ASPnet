@@ -21,7 +21,7 @@
                 <tr>
                     <td class="auto-style1">Empresa:</td>
                     <td class="auto-style2">Site:</td>
-                    <td>Opções</td>
+                    <td>&nbsp;</td>
                 </tr>
                 <tr>
                     <td class="auto-style1">
@@ -31,27 +31,21 @@
                         <asp:TextBox ID="txtAddress" runat="server" Width="440px"></asp:TextBox>
                     </td>
                     <td>
-                        <asp:Button ID="btnInsert" runat="server" OnClick="btnInsert_Click" Text="Adicionar" />
-                        <asp:Button ID="btnSelect" runat="server" OnClick="btnSelect_Click" Text="Selecionar Site" />
-                    </td>
+                        &nbsp;</td>
                 </tr>
                 <tr>
                     <td class="auto-style1">
-                        <asp:DropDownList ID="dlistSite" runat="server" Width="226px">
-                            <asp:ListItem>Selecione uma empresa</asp:ListItem>
-                            <asp:ListItem Value="1">Microsoft</asp:ListItem>
-                            <asp:ListItem Value="2">Fiat</asp:ListItem>
-                            <asp:ListItem Value="3">Itau</asp:ListItem>
-                            <asp:ListItem>Google</asp:ListItem>
-                            <asp:ListItem>Cifra Club</asp:ListItem>
+                        <asp:ListBox ID="listAddress" runat="server" Width="401px" SelectionMode="Multiple">
+                        </asp:ListBox>
+                        <br />
+                        <br />
+                        <asp:DropDownList ID="dlistSite" runat="server" Width="399px">
                         </asp:DropDownList>
-                        <br />
-                        <br />
                     </td>
                     <td class="auto-style2">
-                        <asp:ListBox ID="listAddress" runat="server" Width="380px">
-                            <asp:ListItem>Lista de Sites</asp:ListItem>
-                        </asp:ListBox>
+                        Opções<br />
+                        <asp:Button ID="btnInsert" runat="server" OnClick="btnInsert_Click" Text="Adicionar Site" />
+                        <asp:Button ID="btnSelect" runat="server" OnClick="btnSelect_Click" Text="Selecionar Site" />
                     </td>
                     <td>&nbsp;</td>
                 </tr>

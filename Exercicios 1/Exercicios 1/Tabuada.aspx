@@ -16,7 +16,10 @@
         </asp:DropDownList>
         <asp:Button ID="btnExecutar" runat="server" OnClick="btnExecutar_Click" Text="Exibir Tabuada" />
         <br />
-        <asp:ListBox ID="lbxDados" runat="server" OnSelectedIndexChanged="lbxDados_SelectedIndexChanged"></asp:ListBox>
+        <asp:ListBox ID="lbxDados" runat="server" OnSelectedIndexChanged="lbxDados_SelectedIndexChanged" BackColor="Black" ForeColor="#66FF66" Height="251px" Visible="False" Width="74px"></asp:ListBox>
+        <asp:Table ID="tbDados" runat="server" Height="305px" Visible="False" Width="213px">
+        </asp:Table>
+        <asp:PlaceHolder ID="PlaceHolder1" runat="server"></asp:PlaceHolder>
     </form>
 </body>
 </html>
